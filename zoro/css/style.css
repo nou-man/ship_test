@@ -1,0 +1,340 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+::-webkit-scrollbar {
+    background: lavender;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: teal;
+    border-radius: 5px;
+}
+body {
+    color: #666666;
+    background: #dddddd;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.zoro-iedge {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
+
+/* Adjust the logo size for different screen sizes */
+@media screen and (max-width: 768px) {
+    .zoro-iedge {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .zoro-iedge {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+zoro-h1,
+zoro-h2,
+zoro-h3,
+zoro-h4,
+zoro-h5,
+zoro-h6 {
+    color: #333;
+}
+
+a {
+    color: #666666;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: teal;
+    outline: none;
+    text-decoration: none;
+}
+
+zoro-btn:focus {
+    box-shadow: none;
+}
+
+.zoro-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.zoro-back-to-top {
+    position: fixed;
+    display: none;
+    background: teal;
+    color: #121518;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.zoro-back-to-top:hover {
+    color: teal;
+    background: #121518;
+}
+
+.zoro-back-to-top i {
+    padding-top: 10px;
+}
+
+zoro-btn {
+    transition: .3s;
+}
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.zoro-top-bar {
+    position: relative;
+    height: 90px;
+    background: white;
+}
+
+.zoro-top-bar .zoro-logo {
+    padding: 15px 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.zoro-top-bar .zoro-logo h1 {
+    margin: 0;
+    color: #333;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.zoro-top-bar .zoro-logo img {
+    max-width: 100%;
+    max-height: 60px;
+}
+
+.zoro-top-bar .zoro-top-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.zoro-top-bar .zoro-top-bar-icon {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoro-top-bar .zoro-top-bar-icon [class^="flaticon-"]::before {
+    margin: 0;
+    color: #333;
+    font-size: 40px;
+}
+
+.zoro-top-bar .zoro-top-bar-text {
+    padding-left: 15px;
+}
+
+.zoro-top-bar .zoro-top-bar-text h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.zoro-top-bar .zoro-top-bar-text p {
+    margin: 0;
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (min-width: 992px) {
+    .zoro-top-bar {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .zoro-top-bar .zoro-logo {
+        text-align: center;
+    }
+}
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+
+.company-logo {
+    width: 100px;
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.company_name {
+    margin: 0;
+}
+
+.zoro-nav-bar {
+    position: relative;
+    background: lavender;
+    transition: .3s;
+}
+
+.zoro-nav-bar .container-fluid {
+    padding: 0;
+}
+
+.zoro-nav-bar.zoro-nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1366px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+
+.zoro-nav-bar .navbar {
+    height: 8vh;
+    background: #209159 !important;
+    padding: 0%;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    /* color: teal; */
+    color: #E2FF00;
+    transition: none;
+}
+
+.zoro-nav-bar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #000;
+}
+
+.dropdown-menu a.dropdown-item {
+    color: white;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: teal;
+    color: white;
+    border-color: blue;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        background: #000;
+        text-align: left; /* Adjusts text alignment */
+    }
+
+    .dropdown-menu a.dropdown-item {
+        color: teal;
+        text-align: center;
+    }
+
+    .dropdown-menu a.dropdown-item:hover {
+        background-color: black;
+        color: white;
+        text-decoration: underline;
+        border-color: blue;
+    }
+}
+
+.zoro-nav-bar .btn {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+}
+
+.zoro-nav-bar .btn:hover {
+    color: #333;
+    background: teal;
+    border-color: teal;
+}
+
+@media (min-width: 992px) {
+    .zoro-nav-bar {
+        padding: 0 75px;
+    }
+
+    .zoro-nav-bar.zoro-nav-sticky {
+        padding: 0;
+    }
+
+    .zoro-nav-bar .navbar {
+        padding: 20px;
+    }
+
+    .zoro-nav-bar .navbar-brand {
+        display: none;
+    }
+
+    .zoro-nav-bar a.nav-link {
+        padding: 8px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .zoro-nav-bar .navbar {
+        padding: 15px;
+    }
+
+    .zoro-nav-bar a.nav-link {
+        padding: 5px;
+    }
+
+    .zoro-nav-bar .dropdown-menu {
+        box-shadow: none;
+    }
+
+    .zoro-nav-bar .btn {
+        display: none;
+    }
+}
+
+/* **************************** */
+/* ********* NAV END ********** */
+/* **************************** */
+
+/* custom nav */
+.zoro-nav-i2 {
+    background-color: #006f3d;
+    height: 100%;
+    width: 50px;
+}
+
+/* new styles */
