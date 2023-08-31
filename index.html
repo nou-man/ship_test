@@ -129,26 +129,28 @@
           <div class="sticky-nav-custom">
             <nav class="d-flex  navbar-expand-lg d-block nav-main-custom">
               <div class="nav-sec1">
-                <ul class="list-unstyled d-flex navbar-nav mx-auto">
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">HOME</a>
-                  </li>
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">ABOUT US</a>
-                  </li>
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">DEALERS</a>
-                  </li>
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">SERVICES</a>
-                  </li>
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">NEWS</a>
-                  </li>
-                  <li class="mx-2">
-                    <a href="#" class="nav-item">CONTACT</a>
-                  </li>
-                </ul>
+                <div class="container">
+                  <ul class="list-unstyled d-flex navbar-nav mx-auto">
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">HOME</a>
+                    </li>
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">ABOUT US</a>
+                    </li>
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">DEALERS</a>
+                    </li>
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">SERVICES</a>
+                    </li>
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">NEWS</a>
+                    </li>
+                    <li class="mx-2">
+                      <a href="#" class="nav-item">CONTACT</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="nav-sec2">
                 <a href=""><span class="fas fa-bars mx-4 "></span></a>
@@ -177,56 +179,90 @@
       ============================
       -->
 
-    <section class="slider">
-      <div class="slider-carousel owl-carousel">
-        <div class="slide">
-          <video autoplay loop muted playsinline>
-            <source src="assets/images/video/hero_video.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </section>
 
-    <!-- <script src="path-to-your-owl-carousel/js/jquery.min.js"></script> -->
-    <!-- <script src="path-to-your-owl-carousel/js/owl.carousel.min.js"></script> -->
-    <script>
-      $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-          items: 1, // Display one item at a time
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 5000, // Adjust autoplay interval as needed
-          nav: true, // Show navigation arrows
-          dots: true // Show navigation dots
-        });
-      });
-    </script>
+
+    <!-- *******************fixed************ top video****************  -->
+
+
+
 
     <style>
-      .owl-carousel {
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .custom-slider-container {
+        position: relative;
         width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .custom-video-background {
+        position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .custom-slider-content {
+        position: absolute;
+        top: 70%;
+        left: 5%;
+        transform: translate(0, 0);
+        color: white;
+        text-align: left;
+        z-index: 1;
+      }
+
+      .custom-slider-content h1 {
+        color: black;
+      }
+
+      .custom-slider-content h2 {
+        color: white;
+      }
+
+      .custom-slide {
+        display: none;
       }
 
       @media (max-width: 768px) {
-
-        /* Apply these styles to the video container */
-        .slider {
-          position: relative;
-          width: 100%;
-          max-width: 100%;
-          overflow: hidden;
+        .custom-slider-content {
+          font-size: 24px;
         }
-
-        /* Style the video element to fit the container width */
-        .slider video {
-          width: 100%;
-          height: 100%;
-        }
-
       }
     </style>
+
+    <div class="custom-slider-container">
+      <video class="custom-video-background" autoplay loop muted>
+        <source src="./assets/images/video/hero_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="custom-slider-content">
+        <h1>Compass</h1>
+        <h2>YOUR SHIPBROKERS.</h2>
+      </div>
+    </div>
+    <script>
+      const video = document.querySelector('.custom-video-background');
+
+      video.addEventListener('loadedmetadata', () => {
+        video.style.opacity = 1;
+      });
+    </script>
+
+    <!-- *******************brroke************ top video****************  -->
+
+
+
+
+
     <!--
       ============================
       FeaturesBar #1 Section
